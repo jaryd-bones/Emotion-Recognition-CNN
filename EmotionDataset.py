@@ -23,6 +23,6 @@ class EmotionDataset(Dataset):
 
 def get_transform():
     return transforms.Compose([
-        transforms.Resize((128, 128)),
+        transforms.Resize((96, 96)),
         transforms.ToTensor(),
     ])
