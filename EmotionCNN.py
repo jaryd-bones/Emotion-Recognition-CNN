@@ -14,13 +14,9 @@ class EmotionCNN(nn.Module):
 
     def forward(self, x):
         x = self.pool(F.relu(self.conv1(x)))
-        print("Shape after conv1: ", x.shape)
         x = self.pool(F.relu(self.conv2(x)))
-        print("Shape after conv2: ", x.shape)
         x = self.pool(F.relu(self.conv3(x)))
-        print("Shape after conv3: ", x.shape)
         x = x.view(x.size(0), -1)
-        print("Shape after flattening: ", x.shape)
         x = self.dropout(F.relu(self.fc1(x)))
         x = self.fc2(x)
         return x
