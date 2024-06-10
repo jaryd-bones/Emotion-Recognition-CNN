@@ -13,13 +13,13 @@ class EmotionDataset(Dataset):
 
     def __getitem__(self, idx):
         img_path = self.dataframe.iloc[idx, 0]
-        label = self.dataframe.iloc[idx, 1:].values.astype('float32')
+        label = self.dataframe.iloc[idx, 1]
 
         image = Image.open(img_path).convert('RGB')
         if self.transform:
             image = self.transform(image)
 
-        return image, torch.from_numpy(label)
+        return image, label
 
 def get_transform():
     return transforms.Compose([
