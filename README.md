@@ -1,6 +1,6 @@
 # Emotion Recognition CNN
 
-A convolutional neural network (CNN) built with **PyTorch** for **facial emotion recognition**.  
+A convolutional neural network built with **PyTorch** for **facial emotion recognition**.  
 This project was developed as part of a computer vision course to classify facial expressions into eight distinct emotions.
 
 
